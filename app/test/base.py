@@ -15,7 +15,7 @@ class BaseTestCase(TestCase):
 
         """adding new record"""
         payload = {'text': 'test data'}
-        response = self.client.post(self.BASE_URL + '/Tasks/', json=payload)
+        response = self.client.post(self.BASE_URL + '/tasks/', json=payload)
         data = json.loads(response.data.decode())
         self.TASK_ID=data.get('task_id')
 

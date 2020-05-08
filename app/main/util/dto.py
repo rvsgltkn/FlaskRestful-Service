@@ -2,7 +2,7 @@ from flask_restx import Namespace, fields
 
 class TaskDto():
 
-    api = Namespace('Tasks', description='Task api information')
+    api = Namespace('tasks', description='Task api information')
 
     model_content=api.model('content',{
         'text':fields.String(required=True, description='text value'),
